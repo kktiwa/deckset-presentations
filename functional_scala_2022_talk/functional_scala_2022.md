@@ -12,10 +12,10 @@ slidenumbers: true
 Lead Data Engineer
 Thoughtworks Australia
 
-![](/Users/kunaltiwary/Documents/functional_scala__2022/assets/github.png) @kktiwa
-![](/Users/kunaltiwary/Documents/functional_scala__2022/assets/twitter.png) @TheKunalTiwary
+![](assets/github.png) @kktiwa
+![](assets/twitter.png) @TheKunalTiwary
 
-![Right](/Users/kunaltiwary/Documents/functional_scala__2022/assets/kunal-headshot.jpeg)
+![Right](assets/kunal-headshot.jpeg)
 
 ^ Worked in backend engineering roles for about 10 years
 Moved into data and machine learning engineering for over 5 years
@@ -38,7 +38,7 @@ Weekly load and a classic pull model batch process
 ---
 # What is a Data Pipeline?
 
-![Inline](/Users/kunaltiwary/Documents/functional_scala__2022/assets/data_pipeline.png)
+![Inline](assets/data_pipeline.png)
 
 ^ Compute engines which can perform transformations
 
@@ -48,7 +48,7 @@ Weekly load and a classic pull model batch process
 + Driver will wait until jobs are completed to submit new ones to executors
 + Operations are __synchronous__ at job level
 
-![right, 80%, original](/Users/kunaltiwary/Documents/functional_scala__2022/assets/spark_architecture.png)
+![right, 80%, original](assets/spark_architecture.png)
 
 ^ Driver & Executor concept
 Spark applications run as independent sets of processes on a cluster, coordinated by the SparkContext object in your main program
@@ -63,7 +63,7 @@ Spark cannot run things async by default
 + Independent datasets
 + Same data processing logic
 
-![right, 75%, original](/Users/kunaltiwary/Documents/functional_scala__2022/assets/data_process_flow.png)
+![right, 75%, original](assets/data_process_flow.png)
 
 ^ Why joining all datasets together wasn't a good idea?
 Spark needs additional feature to parallelise operations
