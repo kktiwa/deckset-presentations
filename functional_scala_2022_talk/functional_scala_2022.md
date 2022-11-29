@@ -75,6 +75,8 @@ Spark needs additional feature to parallelise operations
 + Simple to define `retries` & `timeouts`
 
 ^ Allowed us to use library functions with different return types
+ZIO Fibers benefits such as shutting down inactive fibers, dynamic static, don't add GC root so simplify garbage collection
+
 
 ---
 # `For each par` example
@@ -85,9 +87,7 @@ val pipelinesToRun = Seq[Task[A]]
 val effectToRun =
   for {
     sem <- Semaphore.make(permits = parallelismFactor)
-    result <- ZIO.foreachPar(pipelinesToRun) {
-      sem.withPermit(_)
-    }
+    result <- ZIO.foreachParN(pipelinesToRun)
   } yield result
 
 val allResults = runtime.unsafeRun(effectToRun)
@@ -111,7 +111,7 @@ for {
 } yield result
 ```
 ^ Forking any IO[E, A] effect means it will immediately run on a new fiber
-A fiber is a lightweight thread of execution
+A fiber is a lightweight thread (virtual thread) of execution
 Fibers are spawned by forking IO actions, which, conceptually at least, runs them concurrently with the parent IO action.
 Fibers can be joined, yielding their result
 
@@ -134,6 +134,7 @@ Task {
 
 ^ `someMap` = Cache[String, Dataset[A]] which is a `ConcurrentHashMap` implementation
 retry up to 2 times with an exponential wait in between each retry but the total amount of time spent on this task cannot exceed 10 minutes.
+Cancel long running queries and avoid compute wastage
 
 ---
 # Functional Scala Features
