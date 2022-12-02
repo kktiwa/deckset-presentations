@@ -86,8 +86,10 @@ val pipelinesToRun = Seq[Task[A]]
 
 val effectToRun =
   for {
-    sem <- Semaphore.make(permits = parallelismFactor)
-    result <- ZIO.foreachParN(pipelinesToRun)
+       sem    <- Semaphore.make(permits = parallelismFactor)
+       result <- ZIO.foreachPar(pipelinesToRun) {
+         sem.withPermit(_)
+    }
   } yield result
 
 val allResults = runtime.unsafeRun(effectToRun)
@@ -102,8 +104,8 @@ Parallelize multiple runs and return `List[Result]`
 ```scala
 for {
   _ <- ZIO.succeed(logger.info(s"Started processing ${model.name}"))
-  firstTask <- ZIO.fromTry(repository.read(model.name)).fork
-  secondTask <- Task(repository.read(pathToDataSet)).fork
+  firstTask <- ZIO.fromTry(repository.read(pathToDataSet1)).fork
+  secondTask <- ZIO.fromTry(repository.read(pathToDataSet2)).fork
   firstDataSet <- firstTask.join
   secondDataSet <- secondTask.join
   result <- score(firstDataSet)(secondDataSet)(model)(scoringColumn)
@@ -159,6 +161,7 @@ def getMetricsForTargetHierarchy(targetIdColumn: String)
 ```
 
 ^ Chain together multiple small functions
+Dataset in => Dataset out
 Currying of functions enables this
 Easy testing & debugging (one place to fix)
 Enhanced reusability allowing moving into core libraries (domain specific)
@@ -201,3 +204,11 @@ Compute-heavy less parallelism/ less compute heavy more parallelism
 Common data model allowed to write a clean & decoupled pipeline
 Process more with the compute at your disposal
 Write Small functions from the start that'll organically make it easy to pull out common functionality into core modules
+
+---
+# Thank You
+
+To all members of the conference organising team and in particular Ziverge for:
+
++ providing the opportunity to present
++ managing a conference at this scale
