@@ -47,11 +47,20 @@ This ensures that the *right people* can make *consistent decisions* about the q
 
 + Team Shape: Data Stewards, Data Engineers and Data Owners
 + Decentralized ownership: Codifying principles makes it easy
-+ Metadata: Build with metadata being a first-class citizen which informs policy decisions
++ Metadata: Metadata is quickly becoming more valuable than the actual data it represents. Build with metadata being a first-class citizen which informs policy decisions
 + Cloud-native policies: Leverage cloud
 + Center for Internet Security (CIS Benchmarks): The CIS Benchmarks are prescriptive configuration recommendations for more than 25+ vendor product families. They represent the consensus-based effort of cybersecurity experts globally to help you protect your systems against threats more confidently.
 
 
+
+---
+
+## Metadata Ingestion Patterns
+
+Some common patterns for ingesting metadata are:
+
+![Inline](assets/metadata_pull_model.png)
+![Inline](assets/metadata_push_model.png)
 
 ---
 
