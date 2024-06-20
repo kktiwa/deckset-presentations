@@ -23,6 +23,42 @@ Moved into data and machine learning engineering for over 7 years
 
 ---
 
+## High Level Points
+> What is data governance
+
+> Why data governance needs a codified approach
+
+> What does it look like now - Chaos
+	Data at rest
+	In flight
+	Serving layer
+	Compliance policies
+	Data Data
+	Metrics
+
+> What does it look like if you take a engineering approach - Nirvana
+> Metadata
+…
+> But its not just technical…
+	Team size / culture
+	Approach etc
+
+> Why
+  Proactive
+
+> How do you start the journey
+
+> What are the X steps you can take now?
+	Metric layer
+	Usage tracking 
+	Show value quickly by saving cost and reducing risk
+	Data quality where it measures
+	Codify responsibilities
+	Templates
+	Review CIS benchmarks?
+
+---
+
 ## Data Governance: What is it?
 
 > Data governance is about understanding the data your organization has and having a *structured framework* of roles and responsibilities to manage it. 
@@ -35,11 +71,12 @@ This ensures that the *right people* can make *consistent decisions* about the q
 ## What should we govern?
 
 + What should we govern?
-	- Data at rest
-	- Data in flight
-	- Data access
-	- Policies
-	- Dark Data
+	- Data at rest (IaaC driven policies)
+	- Data in flight (IaaC driven policies)
+	- Data serving layer (IaaC driven policies)
+	- Compliance Policies (IaaC driven policies)
+	- Dark Data (usage tracking)
+	- Metrics (think dbt semantic layer)
 
 ---	
 
