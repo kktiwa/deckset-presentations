@@ -161,6 +161,14 @@ Credentials used to access databases and other AWS Services need to be managed a
 [^3]: https://www.cisecurity.org/cis-benchmarks
 
 ---
+![right fit](assets/cross_functional_teams.jpg)
+# And, is codification enough?
+
+- Decentralised team ownership
+- Cross-functional composition
+- Governance culture at par with software engineering culture
+
+---
 ![right fit](assets/measure_roi_metrics.jpg)
 # So, are we succeeding?
 
@@ -170,3 +178,5 @@ Credentials used to access databases and other AWS Services need to be managed a
 - Time to detect a violation: observability
 - Time to implement a policy change: onboard new policies
 - Metric consistency: trust of stakeholders on metrics
+
+_But focus on what's hurting you the most, now_
