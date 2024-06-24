@@ -152,31 +152,32 @@ A simple example:
 Level 1
 
 `Description`:
-
 Lambda functions often have to access a database or other services within your environment.
-`Rationale`:
 
+`Rationale`:
 Credentials used to access databases and other AWS Services need to be managed and regularly rotated to keep access into critical systems secure. Keeping any credentials and manually updating the passwords would be cumbersome, but AWS Secrets Manager allows you to manage and rotate passwords.
 
 [^3]: https://www.cisecurity.org/cis-benchmarks
 
 ---
-![right fit](assets/cross_functional_teams.jpg)
+![right fit](https://emt.gartnerweb.com/ngw/globalassets/en/data-analytics/images/infographics/mapping-data-and-analytics-to-business-process-outcomes.png)
 # And, is codification enough?
 
 - Decentralised team ownership
-- Cross-functional composition
 - Governance culture at par with software engineering culture
+- Establish connection between data, its governance and achieving the enterprise mission
 
 ---
 ![right fit](assets/measure_roi_metrics.jpg)
 # So, are we succeeding?
 
 
-- Usage: % unused data
-- Data Quality Levels: average DQ score
+- Usage Tracking: % unused data
+- [^4]Data Quality Score: average DQ score
 - Time to detect a violation: observability
 - Time to implement a policy change: onboard new policies
 - Metric consistency: trust of stakeholders on metrics
 
 _But focus on what's hurting you the most, now_
+
+[^4]:https://resources.montecarlodata.com/c/data-quality-calculator?x=siSBrq
