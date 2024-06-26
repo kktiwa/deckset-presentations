@@ -29,29 +29,30 @@ Moved into data and machine learning engineering for over 7 years
 
 ![right, original](assets/chaos_state.jpg)
 
-> _Does this data get even used and who uses it?_
+> _Does this data get even **used** and **who** uses it?_
 
-> _Who owns this data pipeline?_
+> _Who **owns** this data **pipeline**?_
 
->  _Where does this metric come from?_
+>  _**Where** does this **metric** come from?_
 
-> _Is this the right formula?_
+> _Is this the **right formula**?_
 
-> _What is PII information in this data asset?_
+> _**What** is **PII information** in this data asset?_
 
-> _Are we encrpyting this column containing <insert compliance rule>?_
+> _Are we **encrpyting** this column containing <insert compliance rule>?_
 
-> _This column value doesn't look right for many rows. Can I trust this data?_
+> _This column value doesn't look right for many rows. Can I **trust** this data?_
 
 ---
 
 # So what is the answer?
 
 ![right, original](assets/the_answer.jpg)
-> The process of maintaining the *availability*, *usability*, *provenance*, and *security* of data.
+> The process of maintaining the **availability**, **usability**, **provenance**, and **security** of data.
 
 
-> _It helps to keep your CFO out of jail card._ :thumbsup:
+
+> It helps to keep your CFO out of jail card. :smile:
 -- A data leader
 
 ---
@@ -70,7 +71,7 @@ Moved into data and machine learning engineering for over 7 years
 # Data Pipelines Now
 - Growing use cases
 - Multiple data sources
-- Regulations and scrutiny (GDPR)
+- Increased regulations and scrutiny
 - Distributed Teams
 
 ---	
@@ -91,9 +92,11 @@ Moved into data and machine learning engineering for over 7 years
 	- Data in flight
 	- Data serving
 - Dark Data [^1]
-- Metrics
+- Metrics [^2]
 
 [^1]:https://www.gartner.com/en/information-technology/glossary/dark-data
+
+[^2]:https://docs.getdbt.com/docs/use-dbt-semantic-layer/dbt-sl
 
 ---
 ![right fit](assets/policies_as_template.png)
@@ -135,29 +138,24 @@ Moved into data and machine learning engineering for over 7 years
 # Data Quality - The Elephant
 Samsung’s $105B "Fat Finger" Data Entry Error
 
-[^2]_In April 2018, Samsung Securities accidentally issued $105 billion worth of shares to employees due to a typo, creating 30 times more shares than in existence. This error led to employees selling $187 million worth of these "ghost shares" within 37 minutes. The fallout saw Samsung Securities' value drop by $300 million._
+[^3]_In April 2018, Samsung Securities accidentally issued $105 billion worth of shares to employees due to a typo, creating 30 times more shares than in existence. This error led to employees selling $187 million worth of these "ghost shares" within 37 minutes. The fallout saw Samsung Securities' value drop by $300 million._
 
-[^2]: https://www.bloomberg.com/news/articles/2018-04-12/the-105-billion-ghost-stock-blunder-rocking-markets-in-korea
+[^3]: https://www.bloomberg.com/news/articles/2018-04-12/the-105-billion-ghost-stock-blunder-rocking-markets-in-korea
 
 ---
 ![right fit](assets/cis_benchmarks.jpg)
 # Is there a starting point?
-**[^3]Center for Internet Security** (CIS) benchmarks are:
+**[^4] Center for Internet Security** (CIS) benchmarks are:
 - Prescriptive configuration recommendations for more than 25+ vendor product families
 - Consensus-based effort of cybersecurity experts globally
 
+
 A simple example:
 
-`Profile Applicability`:
-Level 1
-
-`Description`:
-Lambda functions often have to access a database or other services within your environment.
-
-`Rationale`:
 Credentials used to access databases and other AWS Services need to be managed and regularly rotated to keep access into critical systems secure. Keeping any credentials and manually updating the passwords would be cumbersome, but AWS Secrets Manager allows you to manage and rotate passwords.
 
-[^3]: https://www.cisecurity.org/cis-benchmarks
+
+[^4]: https://www.cisecurity.org/cis-benchmarks
 
 ---
 ![right fit](https://emt.gartnerweb.com/ngw/globalassets/en/data-analytics/images/infographics/mapping-data-and-analytics-to-business-process-outcomes.png)
@@ -173,11 +171,11 @@ Credentials used to access databases and other AWS Services need to be managed a
 
 
 - Usage Tracking: % unused data
-- [^4]Data Quality Score: average DQ score
+- [^5]Data Quality Score: average DQ score
 - Time to detect a violation: observability
 - Time to implement a policy change: onboard new policies
 - Metric consistency: trust of stakeholders on metrics
 
 _But focus on what's hurting you the most, now_
 
-[^4]:https://resources.montecarlodata.com/c/data-quality-calculator?x=siSBrq
+[^5]:https://resources.montecarlodata.com/c/data-quality-calculator?x=siSBrq
