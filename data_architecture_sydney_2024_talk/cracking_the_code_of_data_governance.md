@@ -63,7 +63,7 @@ Moved into data and machine learning engineering for over 7 years
 
 - Basic BI use cases
 - Less data sources
-- Siloed teams
+- Siloed Teams
 
 ---
 
@@ -76,9 +76,9 @@ Moved into data and machine learning engineering for over 7 years
 
 ---	
 
-# 2 Key Catalysts: The Cloud & Metadata
+# The Cloud & Metadata - 2 Key Enablers
 
-- Cloud-native policies driven by IaaC
+- Cloud-native policies driven by Infrastructure as Code (IaC)
 - Treating metadata as a first-class citizen
 
 ![right fit](assets/metadata_first_class_citizen.jpg)
@@ -87,7 +87,7 @@ Moved into data and machine learning engineering for over 7 years
 ![right fit](assets/cloud_native_policies.jpg)
 # Define common taxonomy
 - Abstract common policy and compliance rules
-- Use pre-defined IaaC templates
+- Use pre-defined Infrastructure as Code (IaC) templates
 	- Data at rest
 	- Data in flight
 	- Data serving
@@ -100,7 +100,9 @@ Moved into data and machine learning engineering for over 7 years
 
 ---
 ![right fit](assets/policies_as_template.png)
-# Adopt policies as templates
+# Codify policies as IaC templates
+
+An example of storage policy template abstraction:
 
 ```yaml
 {
@@ -136,6 +138,8 @@ Moved into data and machine learning engineering for over 7 years
 ---
 ![right fit](assets/dq_elephant.jpg)
 # Data Quality - The Elephant
+Don't kick data quality down the road too far
+
 Samsung’s $105B "Fat Finger" Data Entry Error
 
 [^3]_In April 2018, Samsung Securities accidentally issued $105 billion worth of shares to employees due to a typo, creating 30 times more shares than in existence. This error led to employees selling $187 million worth of these "ghost shares" within 37 minutes. The fallout saw Samsung Securities' value drop by $300 million._
@@ -161,9 +165,9 @@ Credentials used to access databases and other AWS Services need to be managed a
 ![right fit](https://emt.gartnerweb.com/ngw/globalassets/en/data-analytics/images/infographics/mapping-data-and-analytics-to-business-process-outcomes.png)
 # And, is codification enough?
 
+- Establish connection between data, its governance and achieving the enterprise mission
 - Decentralised team ownership
 - Governance culture at par with software engineering culture
-- Establish connection between data, its governance and achieving the enterprise mission
 
 ---
 ![right fit](assets/measure_roi_metrics.jpg)
